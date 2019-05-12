@@ -1,0 +1,9 @@
+vspk
+flask-restful
+requests
+pan-python
+f5-sdk
+python-qpid-proton
+Fernet
+cryptography
+urllib3
