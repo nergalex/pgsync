@@ -1,12 +1,21 @@
-# nuage-pgsync
+# pgsync
 
-nuage-pgsync is a Python program for [Nuage VSP Platform](http://www.nuagenetworks.net/products/virtualized-services-platform/).
-
-nuage-pgsync synchronizes "policy group" objects from Nuage with third-party provider. Supported third-party technology :
+pgsync synchronizes "policy group" objects from a SDN solution with third-party provider. Supported SDN and third-party technologies are:
+* [Nuage VSP Platform](http://www.nuagenetworks.net/products/virtualized-services-platform/).
+* [F5 Networks BIG-IP](https://f5.com/fr/products/big-ip).
 * [Palo Alto Networks Next Generation Firewall](https://www.paloaltonetworks.com/).
-An ip address / policy groups mapping table is synchronized with a pool of Palo Alto Networks (PAN) firewalls (FW).
-Then policy groups can be used in PAN FW security policies through Dynamic Address Group (DAG) objects.
+An ip address / policy groups mapping table from SDN solutions are synchronized in real time to a pool of third-party devices or controllers.
+Then policy groups can be used in FW security policies through Dynamic Address Group (DAG) objects.
 A DAG does not need to commit policy changes to update its associated ip addresses, it's Dynamic ;o)
+
+# warning
+Deprecated ReadMe, todo:
+- add F5 provider
+- amqp event stream and deprecated push channel
+- synchronization optimization with thread queue mechanism
+- PAN test results
+- python 3.7 not supported by vspk
+- encrypted credentials option for INI file
 
 ## High Level Design
 ### The components
